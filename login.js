@@ -19,5 +19,16 @@ const validation = () =>{
         console.log("Invalid lastname");
         return false;
     }
+
+// UC3 (Email)
+    let Email = readline.question("Enter the Email:");
+    let EmailRgx = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+    if (EmailRgx.test(Email) == true){
+        console.log("Valid Email");
+    }else {
+        console.log("Invalid Email");
+        return false;
+    }
 }
+
 validation();
