@@ -29,6 +29,15 @@ const validation = () =>{
         console.log("Invalid Email");
         return false;
     }
+// UC4 (mobilenumber)
+    let MobileNumber = readline.question("Enter the MobileNumber:");
+    let MobileNumberRgx =/^[1-9]{1}[0-9]{9}$/;
+    if (MobileNumberRgx.test(MobileNumber) == true){
+        console.log("Valid MobileNumber");
+    }else {
+        console.log("Invalid MobileNumber");
+        return false;
+    }
 }
 
 validation();
