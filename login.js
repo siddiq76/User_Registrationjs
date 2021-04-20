@@ -56,6 +56,26 @@ const validation = () =>{
         console.log("Invalid password");
         return false;
     }
+
+//UC7 
+    let password3 = readline.question("Enter the password:");
+    let password3Rgx =/^[A-Za-z0-9]{8,}/;
+    if (password3Rgx.test(password3) == true){
+        console.log("Valid password");
+    }else {
+        console.log("Invalid password");
+        return false;
+    }
+//UC8 
+    let password4 = readline.question("Enter the password:");
+    let password4Rgx =/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    if (password4Rgx.test(password4) == true){
+        console.log("Valid password");
+    }else {
+        console.log("Invalid password");
+        return false;
+    }
+    
 }
 
 validation();
