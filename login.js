@@ -9,5 +9,15 @@ const validation = () =>{
         console.log("Invalid firstname");
         return false;
     }
+// UC2(lastname)
+
+    let lname = readline.question("Enter the lastname:");
+    let lnameRgx = /[A-Z]+([ '-][a-zA-Z]+)*/
+    if (lnameRgx.test(lname) == true){
+        console.log("Valid lastname");
+    }else {
+        console.log("Invalid lastname");
+        return false;
+    }
 }
 validation();
