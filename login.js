@@ -38,6 +38,15 @@ const validation = () =>{
         console.log("Invalid MobileNumber");
         return false;
     }
+// UC5 (Password)
+    let password = readline.question("Enter the password:");
+    let passwordRgx =/^[A-Za-z0-9]{8,}/;
+    if (passwordRgx.test(password) == true){
+        console.log("Valid password");
+    }else {
+        console.log("Invalid password");
+        return false;
+    }
 }
 
 validation();
